@@ -1,0 +1,119 @@
+Filetype: IR signals file
+Version: 1
+#
+# Mi Box S (MIBOX4 / MDZ-22-AB) recovery navigation test codes
+# Source: /vendor/etc/remote.tab1, remote.tab2, remote.tab3 on the box (Amlogic IR keymaps)
+# Protocol assumed NEC (8-bit address, 8-bit command). custom_code low byte = NEC address.
+# T3 = tab3 (address 0x02), T1 = tab1 (address 0x04), T2 = tab2 (address 0x01)
+# In recovery: use only Up / Down to move, OK only on "Apply update from EXT". Never OK on any Wipe item.
+#
+# ---------- Table 3 (try first) ----------
+name: T3_Down
+type: parsed
+protocol: NEC
+address: 02 00 00 00
+command: D2 00 00 00
+#
+name: T3_Up
+type: parsed
+protocol: NEC
+address: 02 00 00 00
+command: CA 00 00 00
+#
+name: T3_OK
+type: parsed
+protocol: NEC
+address: 02 00 00 00
+command: CE 00 00 00
+#
+name: T3_Left
+type: parsed
+protocol: NEC
+address: 02 00 00 00
+command: 99 00 00 00
+#
+name: T3_Right
+type: parsed
+protocol: NEC
+address: 02 00 00 00
+command: C1 00 00 00
+#
+name: T3_Home
+type: parsed
+protocol: NEC
+address: 02 00 00 00
+command: 95 00 00 00
+#
+# ---------- Table 1 ----------
+name: T1_Down
+type: parsed
+protocol: NEC
+address: 04 00 00 00
+command: 1D 00 00 00
+#
+name: T1_Up
+type: parsed
+protocol: NEC
+address: 04 00 00 00
+command: 44 00 00 00
+#
+name: T1_OK
+type: parsed
+protocol: NEC
+address: 04 00 00 00
+command: 5C 00 00 00
+#
+name: T1_Left
+type: parsed
+protocol: NEC
+address: 04 00 00 00
+command: 1C 00 00 00
+#
+name: T1_Right
+type: parsed
+protocol: NEC
+address: 04 00 00 00
+command: 48 00 00 00
+#
+name: T1_Home
+type: parsed
+protocol: NEC
+address: 04 00 00 00
+command: 16 00 00 00
+#
+# ---------- Table 2 ----------
+name: T2_Down
+type: parsed
+protocol: NEC
+address: 01 00 00 00
+command: 1A 00 00 00
+#
+name: T2_Up
+type: parsed
+protocol: NEC
+address: 01 00 00 00
+command: 19 00 00 00
+#
+name: T2_OK
+type: parsed
+protocol: NEC
+address: 01 00 00 00
+command: 1D 00 00 00
+#
+name: T2_Left
+type: parsed
+protocol: NEC
+address: 01 00 00 00
+command: 1B 00 00 00
+#
+name: T2_Right
+type: parsed
+protocol: NEC
+address: 01 00 00 00
+command: 1C 00 00 00
+#
+name: T2_Home
+type: parsed
+protocol: NEC
+address: 01 00 00 00
+command: 11 00 00 00
